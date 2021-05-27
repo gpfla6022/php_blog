@@ -1,7 +1,7 @@
 <?php
 
-#echo __DIR__ . "/util.php";
+echo __DIR__ ;
 
-echo $_SESSION['logonMember'];
+#echo $_SESSION['logonMember'];
 ?>
 
