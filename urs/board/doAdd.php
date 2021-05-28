@@ -1,8 +1,21 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/urs/webinit.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/urs/loginCheck.php';
 
-$name = $_POST['name'];
-$boardCode = $_POST['boardCode'];
+
+$name = getStringValueOr($_POST['name'], "");
+$boardCode = getStringValueOr($_POST['boardCode'], "");
+
+
+if( !$name ) {
+    jsHistoryBackExit("제목을 입력해주세요.");
+}
+
+if( !$boardCode ) {
+    jsHistoryBackExit("내용을 입력해주세요.");
+}
+
+
 
 $sql = "
 INSERT INTO board 

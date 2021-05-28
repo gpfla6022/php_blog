@@ -1,16 +1,26 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/urs/webinit.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/urs/loginCheck.php';
 
-if ( isset($_GET['id']) == false ) {
-    jsHistoryBackExit("번호를 입력해 주세요.");
-  }
+$articleId = getIntValueOr($_POST['id'], 0);
+
+if ( $articleId == 0 ) {
+  jsHistoryBackExit("번호를 입력해 주세요.");
+}
+
+$title = getStringValueOr($_POST['title'], "");
+$body = getStringValueOr($_POST['body'], "");
 
 
-$articleId = $_POST['id'];
-$title = $_POST['title'];
-$body = $_POST['body'];
+if( !$title ) {
+  jsHistoryBackExit("제목을 입력해주세요.");
+}
 
-$sql = "
+if( !$body ) {
+  jsHistoryBackExit("내용을 입력해주세요.");
+}
+
+$sql = " 
 UPDATE article
 SET `title` = '$title',
 `body` = '$body',

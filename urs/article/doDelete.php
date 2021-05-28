@@ -1,5 +1,6 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/urs/webinit.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/urs/loginCheck.php';
 
 $articleId = $_GET['id'];
 

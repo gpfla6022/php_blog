@@ -2,11 +2,12 @@
 
 require_once $_SERVER['DOCUMENT_ROOT'] . '/urs/webinit.php';
 
-if ( isset($_GET['id']) == false ) {
+$articleId = getIntValueOr($_GET['id'], 0);
+
+if ( $articleId == 0 ) {
     jsHistoryBackExit("번호를 입력해 주세요.");
 }
 
-$articleId = $_GET['id'];
 
 $sql = "
 SELECT *  

@@ -65,7 +65,19 @@ function jsHistoryBackExit($msg = null) {
     exit;
 }
 
+function getIntValueOr($value, $defaultValue){
+    if( isset($value) ){
+        return intval($value);
+    }
+    return $defaultValue;
+}
 
+function getStringValueOr($value, $defaultValue){
+    if( isset($value) ){
+        return strval($value);
+    }
+    return $defaultValue;
+}
 
 
 ?>

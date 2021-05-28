@@ -1,9 +1,25 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/urs/webinit.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/urs/loginCheck.php';
 
-$id = $_POST['id'];
-$name = $_POST['name'];
-$boardCode = $_POST['boardCode'];
+$id = getIntValueOr($_POST['id'], 0);
+
+if ( $id == 0 ) {
+  jsHistoryBackExit("번호를 입력해 주세요.");
+}
+
+$name = getStringValueOr($_POST['name'], "");
+$boardCode = getStringValueOr($_POST['boardCode'], "");
+
+
+if( !$name ) {
+    jsHistoryBackExit("제목을 입력해주세요.");
+}
+
+if( !$boardCode ) {
+    jsHistoryBackExit("내용을 입력해주세요.");
+}
+
 
 $sql = "
 UPDATE board

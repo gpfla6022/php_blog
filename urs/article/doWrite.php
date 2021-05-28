@@ -1,16 +1,18 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/urs/webinit.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/urs/loginCheck.php';
 
-if(isset($_GET['title']) == false) {
+$title = getStringValueOr($_POST['title'], "");
+$body = getStringValueOr($_POST['body'], "");
+
+
+if( !$title ) {
     jsHistoryBackExit("제목을 입력해주세요.");
 }
 
-if(isset($_GET['body']) == false) {
+if( !$body ) {
     jsHistoryBackExit("내용을 입력해주세요.");
 }
-
-$title = $_POST['title'];
-$body = $_POST['body'];
 
 $sql = "
 INSERT INTO article

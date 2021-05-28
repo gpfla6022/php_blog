@@ -1,20 +1,14 @@
 <?php
 require_once $_SERVER['DOCUMENT_ROOT'] . '/urs/webinit.php';
 
-#if ( isset ($_GET['memId']) == false){
-#    echo "아이디를 입력해주세요.";
-#    exit;
-#}
-
-#if ( isset ($_GET['memPw']) == false) {
-#    echo "비밀번호를 입력해 주세요.";
-#    exit;
-#}
-
 $memId = $_POST['memId'];
 $memPw = $_POST['memPw'];
 
-$sql = "SELECT * FROM `member` WHERE `memId` = '$memId'";
+$sql = "
+SELECT * 
+FROM `member` 
+WHERE `memId` = '$memId'
+";
 
 $member = DB_getRow($sql);
 
