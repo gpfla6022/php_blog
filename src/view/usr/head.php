@@ -63,27 +63,27 @@ $loginedMember = $_REQUEST['App__loginedMember'];
                     <li class="hover:bg-white hover:text-black">
                         <a href="/" class="h-full flex items-center px-5">
                             <span><i class="fas fa-home"></i></span>
-                            <span class="ml-2 font-bold hidden sm:inline">HOME</span>
+                            <span class="ml-2 font-bold hidden sm:inline text-base">HOME</span>
                         </a>
                     </li>
                     <li class="hover:bg-white hover:text-black">
                         <a href="/usr/home/aboutMe" class="h-full flex items-center px-5">
                             <span><i class="far fa-id-card"></i></span>
-                            <span class="ml-2 font-bold hidden sm:inline">ABOUT ME</span>
+                            <span class="ml-2 font-bold hidden sm:inline text-base">ABOUT ME</span>
                         </a>
                     </li>
                     <?php if ($isLogined) { ?>
                         <li class="hover:bg-white hover:text-black">
                             <a href="/usr/member/doLogout" class="h-full flex items-center px-5">
                                 <span><i class="fas fa-sign-out-alt"></i></span>
-                                <span class="ml-2 font-bold hidden sm:inline">LOGOUT</span>
+                                <span class="ml-2 font-bold hidden sm:inline text-base">LOGOUT</span>
                             </a>
                         </li>
                     <?php } else { ?>
                         <li class="hover:bg-white hover:text-black">
                             <a href="/usr/member/login" class="h-full flex items-center px-5">
                                 <span><i class="fas fa-sign-in-alt"></i></span>
-                                <span class="ml-2 font-bold hidden sm:inline">LOGIN</span>
+                                <span class="ml-2 font-bold hidden sm:inline text-base">LOGIN</span>
                             </a>
                         </li>
                     <?php } ?>

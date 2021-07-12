@@ -17,7 +17,7 @@ $pageTitle = "최신 게시물 리스트";
 <?php } ?>
 
 <section class="section-articles mt-4">
-  <div class="container mx-auto">
+  <div class="container mx-auto px-4">
     <div class="con-pad">
 
       <div>
