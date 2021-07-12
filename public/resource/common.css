@@ -1,0 +1,34 @@
+@charset "utf-8";
+
+/* 폰트 적용 */
+
+@font-face {
+  font-family: 'paybooc-Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/paybooc-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+html > body, html > body .tui-editor-contents {
+ font-family: 'paybooc-Bold', sans-serif;
+}
+
+.con-pad {
+  padding:0 1rem;
+}
+
+.top-bar {
+  position: fixed;
+}
+
+.top-bar-head-color {
+  background-color: #f08060;
+}
+
+.top-bar-foot-color {
+  background-color: #f08060;
+}
+.info{
+  padding: 50px;
+}
