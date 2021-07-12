@@ -1,5 +1,2 @@
-DB 시험/
-firstapp/
-practice/
-test/
-user/
+﻿/vendor/
+/db.sql

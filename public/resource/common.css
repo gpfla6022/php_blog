@@ -20,14 +20,15 @@ html > body, html > body .tui-editor-contents {
 
 .top-bar {
   position: fixed;
+  z-index:100;
 }
 
 .top-bar-head-color {
-  background-color: #f08060;
+  background-color: #8c8c8c;
 }
 
 .top-bar-foot-color {
-  background-color: #f08060;
+  background-color: #8c8c8c;
 }
 .info{
   padding: 50px;
